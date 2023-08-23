@@ -5,40 +5,40 @@ import Form from "./Component/Form";
 import SecondFormPage from "./Component/SecondFormPage";
 import PostTable from "./Component/PostTable";
 import React from "react";
-import DepartmentList from "./Component/DepartmentList";
+
 import './App.css';
 
-const departmentData = [
+// const departmentData = [
   
   
-  {
-    name: 'customer_service',
-    subDepartments: [
-      { name: 'support' },
-      { name: 'customer_success' }
+//   {
+//     name: 'customer_service',
+//     subDepartments: [
+//       { name: 'support' },
+//       { name: 'customer_success' }
       
-    ]
-  },
-  {
-    name: 'design',
-    subDepartments: [
-      { name: 'graphic_design' },
-      { name: 'product_design' },
-      {name: 'web_design'}
+//     ]
+//   },
+//   {
+//     name: 'design',
+//     subDepartments: [
+//       { name: 'graphic_design' },
+//       { name: 'product_design' },
+//       {name: 'web_design'}
       
-    ]
-  }
-  ,
-  {
-    name: 'Business Service',
-    subDepartments: [
-      { name: 'Call Centers & Business Centers' },
-      { name: 'Career Planning' },
-      {name: 'Commercial Printing'},
-      {name: 'Dept Collection'}
-    ]
-  }
-];
+//     ]
+//   }
+//   ,
+//   {
+//     name: 'Business Service',
+//     subDepartments: [
+//       { name: 'Call Centers & Business Centers' },
+//       { name: 'Career Planning' },
+//       {name: 'Commercial Printing'},
+//       {name: 'Dept Collection'}
+//     ]
+//   }
+// ];
 
 
 function App() {
@@ -58,10 +58,10 @@ function App() {
     path:"secondPage",
     element:<SecondFormPage/>
   },
-  {
-    path:"departmentList",
-    element: <DepartmentList  departments={departmentData}/>
-  }
+  // {
+  //   path:"departmentList",
+  //   element: <DepartmentList  departments={departmentData}/>
+  // }
 ])
   
 

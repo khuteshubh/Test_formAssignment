@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { DataGrid,GridColDef } from '@mui/x-data-grid';
 import axios from 'axios';
 import { Post } from './models';
-// import DepartmentList from './DepartmentList';
+import DepartmentList from './DepartmentList';
+//import DepartmentList from './DepartmentList';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 100 },
@@ -10,42 +11,38 @@ const columns: GridColDef[] = [
   { field: 'body', headerName: 'Body', width: 500 },
 ];
 
-// const departmentData = [
+const departmentData = [
   
   
-//   {
-//     name: 'Agriculture & Fishing',
-//     subDepartments: [
-//       { name: 'Agriculture' },
-//       { name: 'Crops' },
-//       {name: 'Farming Animals & Livestock'},
-//       {name: 'Fishery & Aquaculture'},
-//       {name: 'Ranching'}
-//     ]
-//   },
-//   {
-//     name: 'Business Services',
-//     subDepartments: [
-//       { name: 'Accounting & Accounting Services' },
-//       { name: 'Auctions' },
-//       {name: 'Business Services - General'},
-//       {name: 'Call Centers & Business Centers'},
-//       {name: 'Career Planning'},
-//       {name: 'Career'},
-//       {name: 'Commercial Printing'},
-//       {name: 'Dept Collection'}
-//     ]
-//   }
-  
-//   ,
-//   {
-//     name: 'Department c',
-//     subDepartments: [
-//       { name: 'Subdept c1' },
-//       { name: 'Subdept c2' }
-//     ]
-//   }
-// ];
+  {
+    name: 'customer_service',
+    subDepartments: [
+      { name: 'support' },
+      { name: 'customer_success' }
+      
+    ]
+  },
+  {
+    name: 'design',
+    subDepartments: [
+      { name: 'graphic_design' },
+      { name: 'product_design' },
+      {name: 'web_design'}
+      
+    ]
+  }
+  ,
+  {
+    name: 'Business Service',
+    subDepartments: [
+      { name: 'Call Centers & Business Centers' },
+      { name: 'Career Planning' },
+      {name: 'Commercial Printing'},
+      {name: 'Dept Collection'}
+    ]
+  }
+];
+
 
 function PostTable() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -64,6 +61,7 @@ function PostTable() {
     <>
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid rows={posts} columns={columns}  />
+      <DepartmentList departments={departmentData}/>
       
 
     </div>
