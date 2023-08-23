@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.form-page{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid gray;
+    padding : 100px;
+    border-radius: 4px ;
+    
+
+}
